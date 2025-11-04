@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { selectUser, setUser } from "@/redux/features/userSlice";
 import Head from "next/head";
 import Cookies from "js-cookie";
@@ -11,6 +11,7 @@ import ProtectedPage from "@/components/utils/authentications/protected-page/Pro
 import storageKey from "@/const/storageKey";
 import { decrypt } from "@/helpers/cryptoHelper";
 import HideFromMobileView from "@/components/layouts/generals/HideFromMobileView";
+import Navbar from "@/components/layouts/generals/Navbar";
 
 export default function MainLayout({ children }) {
   const dispatch = useDispatch();
@@ -53,6 +54,22 @@ export default function MainLayout({ children }) {
   //   }
   // }, [user]);
 
+  const [isCarouselPassed, setIsCarouselPassed] = useState(false);
+  //
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight) {
+        setIsCarouselPassed(true);
+      } else {
+        setIsCarouselPassed(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -61,7 +78,14 @@ export default function MainLayout({ children }) {
 
       <div className="bg-white text-black min-h-screen font-museomoderno">
         {/* Only login page can access without login */}
-        {router.pathname === "/" || router.pathname === "/login" ? (
+        {router.pathname === "/" ? (
+          <div
+            className={`${router.asPath.includes("dashboard") ? "hidden" : ""}`}
+          >
+            <Navbar isCarouselPassed={isCarouselPassed} />
+            {children}
+          </div>
+        ) : router.pathname === "/login" ? (
           <>
             <div className="hidden md:inline">{children}</div>
 

@@ -117,9 +117,7 @@ export default function LoginPage() {
           </h1>
         </div>
 
-        <div>
-          <p className="text-end font-times-new-roman mt-28">By NIFO</p>
-        </div>
+        <p className="text-end font-times-new-roman mt-28">By NIFO</p>
 
         <Image
           src="/login-left-section-image.png"
@@ -133,9 +131,9 @@ export default function LoginPage() {
           <Image
             src="/login-arrow-icon.png"
             alt="Sistem Penjaminan Mutu Indonesia"
-            width={1000}
-            height={1000}
-            className="w-14 object-contain"
+            width={200}
+            height={200}
+            className="w-14 object-contain rotate-180"
           />
         </Link>
       </div>
