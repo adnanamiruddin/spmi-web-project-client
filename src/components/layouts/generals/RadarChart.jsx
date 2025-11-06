@@ -30,47 +30,61 @@ export default function RadarChart({
   maxValue = 100,
   height = 300,
 }) {
-  // Data: array of objects with { id, kriteria, nilai, order }
   const sorted = useMemo(
     () =>
       [...data].sort((a, b) => {
         if (a.order != null && b.order != null) return a.order - b.order;
-        return a.id - b.id;
+        return (a.id ?? 0) - (b.id ?? 0);
       }),
     [data]
   );
 
   const labels = useMemo(() => sorted.map((d) => d.kriteria), [sorted]);
-  const values = useMemo(() => sorted.map((d) => d.nilai), [sorted]);
 
-  const chartData = useMemo(() => {
-    return {
+  const percentValues = useMemo(
+    () =>
+      sorted.map((d) => {
+        if (d.nilai_persen != null) return Number(d.nilai_persen);
+        return 0;
+      }),
+    [sorted]
+  );
+
+  const realValues = useMemo(
+    () =>
+      sorted.map((d) => {
+        if (d.nilai_asli != null) return Number(d.nilai_asli);
+        return null;
+      }),
+    [sorted]
+  );
+
+  const chartData = useMemo(
+    () => ({
       labels,
       datasets: [
         {
           label: "Nilai",
-          data: values,
+          data: percentValues,
+          nilaiAsli: realValues,
           backgroundColor: "rgba(59,130,246,0.28)",
-          borderColor: "rgba(59,130,246,1)",
-          pointBackgroundColor: "rgba(59,130,246,1)",
-          pointBorderColor: "#fff",
+          borderColor: "#3EAEFF",
+          pointBackgroundColor: "#0BA5EC",
+          pointBorderColor: "#ffffff",
           pointRadius: 4,
           borderWidth: 2,
           fill: true,
         },
       ],
-    };
-  }, [labels, values]);
+    }),
+    [labels, percentValues, realValues]
+  );
 
   const options = useMemo(
     () => ({
       responsive: true,
       maintainAspectRatio: false,
-      elements: {
-        line: {
-          tension: 0.2,
-        },
-      },
+      elements: { line: { tension: 0.2 } },
       plugins: {
         legend: {
           display: true,
@@ -81,11 +95,27 @@ export default function RadarChart({
             pointStyle: "circle",
           },
         },
-        title: {
-          display: false,
-        },
+        title: { display: false },
         tooltip: {
           enabled: true,
+          callbacks: {
+            label: function (context) {
+              const idx = context.dataIndex;
+              const dataset = context.dataset || {};
+              const parsed = context.parsed;
+              const percentRaw =
+                typeof parsed === "object" ? parsed.r ?? parsed : parsed;
+              const percentNum = Number(percentRaw);
+              let asli = dataset.nilaiAsli?.[idx];
+              if (asli == null && Number.isFinite(percentNum)) {
+                asli = +(percentNum / 20).toFixed(2);
+              }
+              if (asli != null) return `Nilai asli: ${asli}`;
+              if (Number.isFinite(percentNum))
+                return `${context.dataset.label}: ${percentNum}%`;
+              return "";
+            },
+          },
         },
       },
       scales: {
@@ -94,24 +124,14 @@ export default function RadarChart({
           suggestedMin: 0,
           suggestedMax: maxValue,
           ticks: {
+            display: false,
             stepSize: 20,
             color: "#6b7280",
             backdropColor: "transparent",
           },
-          grid: {
-            color: "rgba(107,114,128,0.15)",
-          },
-          angleLines: {
-            color: "rgba(107,114,128,0.15)",
-          },
-          pointLabels: {
-            color: "#111827",
-            font: {
-              size: 12,
-            },
-            // Use padding to move labels away a bit
-            padding: 8,
-          },
+          grid: { color: "#D5D7DA" },
+          angleLines: { color: "#D5D7DA" },
+          pointLabels: { color: "#111827", font: { size: 12 }, padding: 8 },
         },
       },
     }),
@@ -119,7 +139,7 @@ export default function RadarChart({
   );
 
   return (
-    <div style={{ height: height }}>
+    <div style={{ height }}>
       {/* @ts-ignore */}
       <Radar data={chartData} options={options} />
     </div>

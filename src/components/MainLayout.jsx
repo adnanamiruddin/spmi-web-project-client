@@ -73,7 +73,7 @@ export default function MainLayout({ children }) {
   return (
     <>
       <Head>
-        <title>Sistem Penjaminan Mutu Indonesia</title>
+        <title>Sistem Penjaminan Mutu Internal</title>
       </Head>
 
       <div className="bg-white text-black min-h-screen font-museomoderno">

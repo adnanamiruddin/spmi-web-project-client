@@ -31,14 +31,14 @@ export default function DashboardHeader() {
         <div className="flex items-center gap-2">
           <Image
             src="/logo-spmi.png"
-            alt="Sistem Penjaminan Mutu Indonesia"
+            alt="Sistem Penjaminan Mutu Internal"
             width={500}
             height={500}
             className="w-44 object-contain"
           />
         </div>
         <p className="text-2xl text-violet-800">
-          Sistem Penjaminan Mutu Indonesia
+          Sistem Penjaminan Mutu Internal
         </p>
       </Link>
 

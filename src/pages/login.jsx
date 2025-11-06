@@ -107,13 +107,13 @@ export default function LoginPage() {
         <div>
           <Image
             src="/logo-spmi.png"
-            alt="Sistem Penjaminan Mutu Indonesia"
+            alt="Sistem Penjaminan Mutu Internal"
             width={500}
             height={500}
             className="w-[60%] ms-auto"
           />
           <h1 className="mt-2 text-right text-3xl text-violet-800">
-            Sistem Penjaminan Mutu Indonesia
+            Sistem Penjaminan Mutu Internal
           </h1>
         </div>
 
@@ -121,7 +121,7 @@ export default function LoginPage() {
 
         <Image
           src="/login-left-section-image.png"
-          alt="Sistem Penjaminan Mutu Indonesia"
+          alt="Sistem Penjaminan Mutu Internal"
           width={1000}
           height={1000}
           className="w-full h-[80vh] object-cover absolute bottom-0 left-0"
@@ -130,7 +130,7 @@ export default function LoginPage() {
         <Link href="/" className="absolute top-[47%] -right-7 z-10">
           <Image
             src="/login-arrow-icon.png"
-            alt="Sistem Penjaminan Mutu Indonesia"
+            alt="Sistem Penjaminan Mutu Internal"
             width={200}
             height={200}
             className="w-14 object-contain rotate-180"

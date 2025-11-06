@@ -1,108 +1,132 @@
+import Accordion from "@/components/layouts/generals/Accordion";
 import RadarChart from "@/components/layouts/generals/RadarChart";
-import { Icon } from "@iconify/react";
-import Image from "next/image";
-import Link from "next/link";
+import ChartSection from "@/components/layouts/page-components/home/ChartSection";
+import HomeFooter from "@/components/layouts/page-components/home/HomeFooter";
+import HomeHero from "@/components/layouts/page-components/home/HomeHero";
+import TitleSection from "@/components/layouts/page-components/home/TitleSection";
 
 const sampleData = [
-  { id: 1, kriteria: "Kualitas pelayanan publik", nilai: 85, order: 1 },
-  { id: 2, kriteria: "Inovasi dan efisiensi proses", nilai: 90, order: 2 },
-  { id: 3, kriteria: "Kepuasan pengguna layanan", nilai: 75, order: 3 },
-  { id: 4, kriteria: "Transparansi dan akuntabilitas", nilai: 95, order: 4 },
-  { id: 5, kriteria: "Kepatuhan terhadap standar mutu", nilai: 80, order: 5 },
+  {
+    id: 1,
+    kriteria: "Kualitas pelayanan publik",
+    nilai_persen: 85,
+    nilai_asli: 4.25,
+    order: 1,
+  },
+  {
+    id: 2,
+    kriteria: "Inovasi dan efisiensi proses",
+    nilai_persen: 20,
+    nilai_asli: 4.5,
+    order: 2,
+  },
+  {
+    id: 3,
+    kriteria: "Kepuasan pengguna layanan",
+    nilai_persen: 75,
+    nilai_asli: 3.75,
+    order: 3,
+  },
+  {
+    id: 4,
+    kriteria: "Transparansi dan akuntabilitas",
+    nilai_persen: 95,
+    nilai_asli: 4.75,
+    order: 4,
+  },
+  {
+    id: 5,
+    kriteria: "Kepatuhan terhadap standar mutu",
+    nilai_persen: 40,
+    nilai_asli: 4,
+    order: 5,
+  },
 ];
 
 export default function HomePage() {
   return (
     <div>
-      <Image
-        priority
-        src="/home-hero-image.png"
-        alt="Sistem Penjaminan Mutu Indonesia"
-        width={1000}
-        height={1000}
-        className="w-full object-cover"
-      />
-      <Image
-        src="/home-hero-light-image.png"
-        alt="Sistem Penjaminan Mutu Indonesia"
-        width={200}
-        height={200}
-        className="absolute top-0 right-0 w-full opacity-50"
-      />
+      <HomeHero />
 
-      <div className="absolute top-60 w-full px-48">
-        <div className="flex justify-between">
-          <div className="w-[35%]">
-            <div>
-              <Image
-                priority
-                src="/home-hero-logo-spmi.png"
-                alt="Sistem Penjaminan Mutu Indonesia"
-                width={500}
-                height={500}
-                className="w-[70%] ms-auto"
-              />
-              <h1 className="mt-2 w-full text-right text-5xl text-violet-600 font-medium">
-                Sistem Penjaminan <br /> Mutu Indonesia
-              </h1>
-            </div>
-            <p className="text-end font-times-new-roman mt-28 text-white">
-              By NIFO
-            </p>
-          </div>
+      <div className="min-h-screen pt-96 pb-16 px-28 relative">
+        <div id="statistik">
+          <TitleSection
+            leftTitle="Data Grafik"
+            rightTitle="Statistik Penjaminan Mutu"
+          />
 
-          <div className="w-[65%]">
-            <p className="text-8xl text-right font-bold text-violet-500 opacity-80">
-              Selamat <br /> Datang!
-            </p>
-            <Link
-              href="/login"
-              className="ms-auto mt-8 w-[65%] bg-violet-600 opacity-80 text-white flex justify-center items-center py-3 rounded-md gap-3 text-xl font-semibold hover:bg-violet-500 focus:bg-violet-700 transition-colors"
+          <div className="mt-4 flex justify-center gap-4">
+            <ChartSection
+              title={
+                <>
+                  Persentase Rata Nilai Standar Mutu Prodi
+                  <span className="font-normal">
+                    <br />
+                    Berdasarkan Tahun
+                  </span>
+                </>
+              }
+              className="w-1/2"
             >
-              Masuk
-              <Icon icon="solar:login-3-bold" />
-            </Link>
+              <RadarChart data={sampleData} maxValue={100} height={420} />
+            </ChartSection>
+
+            <ChartSection
+              title={
+                <>
+                  Perkembangan Nilai Evaluasi Diri
+                  <span className="font-normal">
+                    <br />
+                    Berdasarkan Tahun
+                  </span>
+                </>
+              }
+              className="w-1/2"
+            >
+              <p>Belum ada</p>
+            </ChartSection>
           </div>
         </div>
 
-        <Image
-          src="/home-hero-big-logo-spmi.png"
-          alt="Sistem Penjaminan Mutu Indonesia"
-          width={500}
-          height={500}
-          className="absolute top-72 left-0 w-full object-contain"
-        />
-      </div>
+        <div id="dokumen" className="mt-16">
+          <TitleSection
+            leftTitle="Dokumen"
+            rightTitle="Kumpulan Dokumen SPMI"
+          />
 
-      <div className="min-h-screen pt-96 pb-24 px-28 relative">
-        <div className="flex justify-between items-center w-full">
-          <p className="text-5xl text-violet-600 font-bold">Data Grafik</p>
-          <p className="text-5xl text-violet-500">Statistik Penjaminan Mutu</p>
+          <div className="mt-4 grid grid-cols-2 gap-4">
+            <Accordion label="Kebijakan Mutu" theme="purple">
+              <div className="mt-4">Kebijakan Mutu</div>
+            </Accordion>
+            <Accordion label="Manual Mutu" theme="purple">
+              <div className="mt-4">Manual Mutu</div>
+            </Accordion>
+
+            <Accordion label="SOP" theme="purple">
+              <div className="mt-4">SOP</div>
+            </Accordion>
+            <Accordion label="Standar" theme="purple">
+              <div className="mt-4">Standar</div>
+            </Accordion>
+
+            <Accordion label="IKA Pusat dan PRODI" theme="purple">
+              <div className="mt-4">IKA Pusat dan PRODI</div>
+            </Accordion>
+            <Accordion label="Formulir yang Digunakan" theme="purple">
+              <div className="mt-4">Formulir yang Digunakan</div>
+            </Accordion>
+
+            <Accordion label="Dokumen Pendukung" theme="purple">
+              <div className="mt-4">Dokumen Pendukung</div>
+            </Accordion>
+            <Accordion label="Hubungi Kami" theme="purple">
+              <div className="mt-4">Hubungi Kami</div>
+            </Accordion>
+          </div>
         </div>
 
-        <div className="mt-4 flex justify-center gap-4">
-          <div className="w-1/2 rounded-lg border border-violet-600">
-            <div className="rounded-t-md bg-violet-600 p-4">
-              <p className="text-white font-semibold">Unduh</p>
-            </div>
-
-            <div className="p-8">
-              <p className="text-violet-600 font-semibold text-2xl text-center">
-                Persentase Rata Nilai Standar Mutu Prodi
-                <span className="font-normal">
-                  <br />
-                  Berdasarkan Tahun
-                </span>
-              </p>
-
-              {/* CHART */}
-              <div className="mt-6">
-                <RadarChart data={sampleData} maxValue={100} height={420} />
-              </div>
-            </div>
-          </div>
-
-          <div className="w-1/2 rounded-md border border-violet-600"></div>
+        <div className="mt-16">
+          <HomeFooter />
         </div>
       </div>
     </div>

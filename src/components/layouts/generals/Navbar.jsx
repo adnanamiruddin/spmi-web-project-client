@@ -7,11 +7,11 @@ import Image from "next/image";
 
 const navMenu = [
   {
-    href: "#",
+    href: "#statistik",
     label: "Statistik",
   },
   {
-    href: "#",
+    href: "#dokumen",
     label: "Dokumen",
   },
 ];
@@ -38,7 +38,7 @@ export default function Navbar({ isCarouselPassed }) {
       <Link href="/" className="flex justify-center items-center gap-3">
         <Image
           src="/icon-spmi-white.png"
-          alt="Sistem Penjaminan Mutu Indonesia"
+          alt="Sistem Penjaminan Mutu Internal"
           width={500}
           height={500}
           className="w-max h-16 object-contain"
