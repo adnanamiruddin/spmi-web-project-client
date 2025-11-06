@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 const mainNavItems = [
   {
-    href: "/dashboard/home",
+    href: "/dashboard/admin/home",
     label: "Beranda",
     icon: <Icon icon="uil:home-alt" className="text-2xl" />,
   },
@@ -10,14 +10,14 @@ const mainNavItems = [
 
 const manajemenStandarMutuNavItems = [
   {
-    href: "/dashboard/manajemen-standar-mutu/daftar-nilai-mutu",
+    href: "/dashboard/admin/manajemen-standar-mutu/daftar-nilai-mutu",
     label: "Daftar Nilai Mutu",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-standar-mutu/daftar-standar-mutu",
+    href: "/dashboard/admin/manajemen-standar-mutu/daftar-standar-mutu",
     label: "Daftar Standar Mutu",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -27,14 +27,14 @@ const manajemenStandarMutuNavItems = [
 
 const manajemenEvaluasiDiriNavItems = [
   {
-    href: "/dashboard/manajemen-evaluasi-diri/pengaturan-periode",
+    href: "/dashboard/admin/manajemen-evaluasi-diri/pengaturan-periode",
     label: "Pengaturan Periode",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-evaluasi-diri/target-nilai-mutu",
+    href: "/dashboard/admin/manajemen-evaluasi-diri/target-nilai-mutu",
     label: "Target Nilai Mutu",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -44,21 +44,21 @@ const manajemenEvaluasiDiriNavItems = [
 
 const manajemenAuditorNavItems = [
   {
-    href: "/dashboard/manajemen-auditor/ploting-auditor",
+    href: "/dashboard/admin/manajemen-auditor/ploting-auditor",
     label: "Ploting Auditor",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-auditor/data-auditor",
+    href: "/dashboard/admin/manajemen-auditor/data-auditor",
     label: "Data Auditor",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-auditor/pakta-integritas-auditor",
+    href: "/dashboard/admin/manajemen-auditor/pakta-integritas-auditor",
     label: "Pakta Integritas Auditor",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -68,28 +68,28 @@ const manajemenAuditorNavItems = [
 
 const manajemenMonevNavItems = [
   {
-    href: "/dashboard/manajemen-auditor/rekap-desk-evaluation",
+    href: "/dashboard/admin/manajemen-auditor/rekap-desk-evaluation",
     label: "Rekap Desk Evaluation",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-auditor/daftar-temuan",
+    href: "/dashboard/admin/manajemen-auditor/daftar-temuan",
     label: "Daftar Temuan",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-auditor/daftar-kesesuaian",
+    href: "/dashboard/admin/manajemen-auditor/daftar-kesesuaian",
     label: "Daftar Kesesuaian",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-auditor/upload-laporan-ami",
+    href: "/dashboard/admin/manajemen-auditor/upload-laporan-ami",
     label: "Upload Laporan AMI",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -99,49 +99,49 @@ const manajemenMonevNavItems = [
 
 const manajemenReferensiNavItems = [
   {
-    href: "/dashboard/manajemen-referensi/fakultas",
+    href: "/dashboard/admin/manajemen-referensi/fakultas",
     label: "Fakultas",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/unit-penunjang",
+    href: "/dashboard/admin/manajemen-referensi/unit-penunjang",
     label: "Unit Penunjang",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/program-studi",
+    href: "/dashboard/admin/manajemen-referensi/program-studi",
     label: "Program Studi",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/standar-nasional",
+    href: "/dashboard/admin/manajemen-referensi/standar-nasional",
     label: "Standar Nasional",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/tahun-periode",
+    href: "/dashboard/admin/manajemen-referensi/tahun-periode",
     label: "Tahun Periode",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/jenis-temuan",
+    href: "/dashboard/admin/manajemen-referensi/jenis-temuan",
     label: "Jenis Temuan",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-referensi/kategori-temuan",
+    href: "/dashboard/admin/manajemen-referensi/kategori-temuan",
     label: "Kategori Temuan",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -151,14 +151,14 @@ const manajemenReferensiNavItems = [
 
 const manajemenDokumenNavItems = [
   {
-    href: "/dashboard/manajemen-dokumen/kategori-dokumen",
+    href: "/dashboard/admin/manajemen-dokumen/kategori-dokumen",
     label: "Kategori Dokumen",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-dokumen/manajemen-dokumen",
+    href: "/dashboard/admin/manajemen-dokumen/manajemen-dokumen",
     label: "Manajemen Dokumen",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -168,21 +168,21 @@ const manajemenDokumenNavItems = [
 
 const manajemenPenggunaNavItems = [
   {
-    href: "/dashboard/manajemen-pengguna/pengaturan-menu",
+    href: "/dashboard/admin/manajemen-pengguna/pengaturan-menu",
     label: "Pengaturan Menu",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-pengguna/pengaturan-grup",
+    href: "/dashboard/admin/manajemen-pengguna/pengaturan-grup",
     label: "Pengaturan Grup",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
     ),
   },
   {
-    href: "/dashboard/manajemen-pengguna/pengaturan-model",
+    href: "/dashboard/admin/manajemen-pengguna/pengaturan-model",
     label: "Pengaturan Model",
     icon: (
       <Icon icon="material-symbols:event-list-outline" className="text-2xl" />
@@ -194,6 +194,7 @@ export const AdminNav = [
   {
     title: "Menu",
     items: mainNavItems,
+    type: "single",
   },
   {
     icon: (
@@ -204,16 +205,19 @@ export const AdminNav = [
     ),
     title: "Manajemen Standar Mutu",
     items: manajemenStandarMutuNavItems,
+    type: "accordion",
   },
   {
     icon: <Icon icon="hugeicons:chart-evaluation" className="text-2xl" />,
     title: "Manajemen Evaluasi Diri",
     items: manajemenEvaluasiDiriNavItems,
+    type: "accordion",
   },
   {
     icon: <Icon icon="guidance:auditorium" className="text-2xl" />,
     title: "Manajemen Auditor",
     items: manajemenAuditorNavItems,
+    type: "accordion",
   },
   {
     icon: (
@@ -221,6 +225,7 @@ export const AdminNav = [
     ),
     title: "Manajemen Monev",
     items: manajemenMonevNavItems,
+    type: "accordion",
   },
   {
     icon: (
@@ -231,15 +236,18 @@ export const AdminNav = [
     ),
     title: "Manajemen Referensi",
     items: manajemenReferensiNavItems,
+    type: "accordion",
   },
   {
     icon: <Icon icon="fluent:document-16-regular" className="text-2xl" />,
     title: "Manajemen Dokumen",
     items: manajemenDokumenNavItems,
+    type: "accordion",
   },
   {
     icon: <Icon icon="lucide:user" className="text-2xl" />,
     title: "Manajemen Pengguna",
     items: manajemenPenggunaNavItems,
+    type: "accordion",
   },
 ];
