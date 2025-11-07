@@ -21,7 +21,7 @@ export default function Checkbox({
         disabled={disabled}
         className={`checkbox rounded-sm border-2 bg-transparent ${
           !blackTheme
-            ? "border-green-500 [--chkbg:theme(colors.green.500)] [--chkfg:theme(colors.white)] disabled:border-green-300 disabled:bg-green-300"
+            ? "border-violet-500 [--chkbg:theme(colors.violet.500)] [--chkfg:theme(colors.white)] disabled:border-violet-300 disabled:bg-violet-300"
             : "border-black [--chkbg:theme(colors.gray.700)] [--chkfg:theme(colors.white)] disabled:border-gray-500 disabled:bg-gray-500"
         }`}
       />
@@ -36,8 +36,8 @@ export default function Checkbox({
               : disabled && blackTheme
               ? "text-gray-400"
               : !disabled
-              ? "text-green-500"
-              : "text-green-200"
+              ? "text-violet-500"
+              : "text-violet-200"
           }`}
         >
           {label}

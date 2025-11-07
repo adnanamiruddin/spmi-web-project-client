@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 
 const mainNavItems = [
   {
-    href: "/dashboard/admin/home",
+    href: "/dashboard/home",
     label: "Beranda",
     icon: <Icon icon="uil:home-alt" className="text-2xl" />,
   },

@@ -17,7 +17,7 @@ export default function PageStillOnProgress() {
         Halaman Masih Dalam Tahap Pengembangan
       </p>
       <button
-        className="text-white px-12 py-1.5 font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-green-500 hover:bg-green-400 disabled:bg-green-700 focus:ring-green-500 focus:bg-green-600"
+        className="text-white px-12 py-1.5 font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-opacity-50 bg-violet-500 hover:bg-violet-400 disabled:bg-violet-700 focus:ring-violet-500 focus:bg-violet-600"
         onClick={() => {
           router.push("/");
         }}

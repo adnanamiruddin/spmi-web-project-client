@@ -78,7 +78,7 @@ export default function Navbar({ isCarouselPassed }) {
                   onClick={handleDrawerClose}
                   className={`text-lg font-semibold ${
                     router.pathname === link.href
-                      ? "bg-gradient-to-br from-green-800 to-green-400"
+                      ? "bg-gradient-to-br from-violet-800 to-violet-400"
                       : ""
                   }`}
                 >
@@ -96,7 +96,7 @@ export default function Navbar({ isCarouselPassed }) {
                       onClick={handleDrawerClose}
                       className={`text-lg font-semibold ${
                         router.pathname === link.href
-                          ? "bg-gradient-to-br from-green-800 to-green-400"
+                          ? "bg-gradient-to-br from-violet-800 to-violet-400"
                           : ""
                       }`}
                     >

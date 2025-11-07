@@ -46,7 +46,7 @@ export default function Input({
           placeholder={placeholder}
           onChange={onChange}
           disabled={disabled}
-          className={`w-full bg-white py-3 px-4 rounded border border-gray-400 focus:ring-[0.5px] focus:ring-green-500 focus:outline-none focus:shadow-sm focus:shadow-green-500 disabled:bg-stone-100 disabled:cursor-not-allowed disabled:text-gray-500 ${
+          className={`w-full bg-white py-3 px-4 rounded border border-gray-400 focus:ring-[0.5px] focus:ring-violet-500 focus:outline-none focus:shadow-sm focus:shadow-violet-500 disabled:bg-stone-100 disabled:cursor-not-allowed disabled:text-gray-500 ${
             type === "time" ? "custom-time-input" : "pr-12"
           }`}
         />

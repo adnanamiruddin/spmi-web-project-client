@@ -1,7 +1,7 @@
 import axios from "axios";
 import queryString from "query-string";
 import Cookies from "js-cookie";
-import storageKey from "@/const/storageKey";
+import storageKey from "@/const/STORAGE_KEY";
 import { decrypt, encrypt } from "@/helpers/cryptoHelper";
 
 const baseURL = process.env.NEXT_PUBLIC_SERVER_URL;

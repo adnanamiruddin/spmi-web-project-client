@@ -13,7 +13,7 @@ export default function EditButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`bg-green-600 border border-green-600 text-white py-2 px-3 rounded flex items-center transition-all duration-300 hover:bg-green-500 hover:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 focus:bg-green-700 disabled:bg-green-600 disabled:brightness-75 disabled:cursor-not-allowed disabled:text-gray-100 ${
+      className={`bg-violet-600 border border-violet-600 text-white py-2 px-3 rounded flex items-center transition-all duration-300 hover:bg-violet-500 hover:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50 focus:bg-violet-700 disabled:bg-violet-600 disabled:brightness-75 disabled:cursor-not-allowed disabled:text-gray-100 ${
         lockWidth ? "w-28 flex justify-center" : ""
       } ${onlyIcon && "w-16"} ${className}`}
     >

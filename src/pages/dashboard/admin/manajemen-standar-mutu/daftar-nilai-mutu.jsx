@@ -1,3 +1,3 @@
-export default function DashboardDaftarNilaiMutuPage() {
-  return <div>DashboardDaftarNilaiMutuPage</div>;
+export default function DaftarNilaiMutuPage() {
+  return <div>DaftarNilaiMutuPage</div>;
 }

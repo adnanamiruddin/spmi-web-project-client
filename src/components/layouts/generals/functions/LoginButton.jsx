@@ -6,7 +6,7 @@ export default function LoginButton({ disabled, loading }) {
       className={` ${
         disabled
           ? "bg-gray-400 cursor-not-allowed"
-          : "bg-green-500 hover:bg-green-600 hover:brightness-125 focus:brightness-75"
+          : "bg-violet-500 hover:bg-violet-600 hover:brightness-125 focus:brightness-75"
       } mt-2 w-full border-0 text-white text-xl py-3 rounded-lg shadow-lg ${
         loading ? "brightness-90" : ""
       }`}

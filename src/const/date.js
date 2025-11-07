@@ -12,12 +12,12 @@ export const yearOptions = Array.from(
   }
 );
 
-export const daysOptions = Array.from({ length: 31 }, (_, index) => ({
+export const DAYS_OPTIONS = Array.from({ length: 31 }, (_, index) => ({
   label: `${index + 1}`,
   value: `${index + 1}`,
 }));
 
-export const monthsOptions = [
+export const MONTHS_OPTIONS = [
   "Januari",
   "Februari",
   "Maret",
@@ -35,7 +35,7 @@ export const monthsOptions = [
   value: `${(index + 1).toString().padStart(2, "0")}`,
 }));
 
-export const monthsOptionsWithNumberValue = [
+export const MONTHS_OPTIONS_WITH_NUMBER_VALUE = [
   "Januari",
   "Februari",
   "Maret",
@@ -53,7 +53,7 @@ export const monthsOptionsWithNumberValue = [
   value: index + 1,
 }));
 
-export const weeksOptions = [
+export const WEEKS_OPTIONS = [
   "Pekan 1",
   "Pekan 2",
   "Pekan 3",
@@ -64,7 +64,7 @@ export const weeksOptions = [
   value: index + 1,
 }));
 
-export const daysList = [
+export const DAYS_LIST = [
   "Senin",
   "Selasa",
   "Rabu",
@@ -76,11 +76,13 @@ export const daysList = [
 
 const getDayListWithTodayDetail = () => {
   const todayName = format(new Date(), "EEEE", { locale: id });
-  return daysList.map((day) => (day === todayName ? `${day} (hari ini)` : day));
+  return DAYS_LIST.map((day) =>
+    day === todayName ? `${day} (hari ini)` : day
+  );
 };
-export const daysListWithTodayDetail = getDayListWithTodayDetail();
+export const DAYS_LIST_WITH_TODAY_DETAIL = getDayListWithTodayDetail();
 
-export const daysNameOptions = [
+export const DAYS_NAME_OPTIONS = [
   "Senin",
   "Selasa",
   "Rabu",

@@ -107,7 +107,7 @@ export default function ExcelDropzone({
                       className="text-2xl"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 bg-green-600 text-white text-xs px-1 rounded">
+                  <div className="absolute bottom-0 left-0 bg-violet-600 text-white text-xs px-1 rounded">
                     {selectedFile.file.name.split(".").pop()}
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function ExcelDropzone({
                   <p className="text-gray-500 text-sm">
                     {(selectedFile.file.size / 1024).toFixed(0)} KB of{" "}
                     {(selectedFile.file.size / 1024).toFixed(0)} KB •
-                    <span className="text-green-600 font-medium ml-1">
+                    <span className="text-violet-600 font-medium ml-1">
                       <Icon
                         icon="material-symbols:check-circle"
                         className="inline mr-1"
@@ -148,7 +148,7 @@ export default function ExcelDropzone({
           // View before upload
           <div
             {...getRootProps()}
-            className="border-2 border-gray-400 border-dashed rounded-lg flex flex-col justify-center items-center gap-2 py-10 cursor-pointer hover:border-green-500 transition"
+            className="border-2 border-gray-400 border-dashed rounded-lg flex flex-col justify-center items-center gap-2 py-10 cursor-pointer hover:border-violet-500 transition"
           >
             <input {...getInputProps()} />
             <Icon icon="uil:file-upload" className="text-5xl text-gray-500" />

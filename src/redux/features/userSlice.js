@@ -1,4 +1,4 @@
-import storageKey from "@/const/storageKey";
+import storageKey from "@/const/STORAGE_KEY";
 import { createSlice } from "@reduxjs/toolkit";
 import Cookies from "js-cookie";
 

@@ -1,4 +1,4 @@
-import { monthsOptions, weeksOptions } from "@/const/date";
+import { MONTHS_OPTIONS, WEEKS_OPTIONS } from "@/const/DATE";
 import {
   differenceInCalendarWeeks,
   differenceInDays,
@@ -95,8 +95,8 @@ export const getCurrentMonthValue = () => {
   const today = new Date();
   const currentMonthValue = (today.getMonth() + 1).toString().padStart(2, "0");
   return (
-    monthsOptions.find((m) => m.value === currentMonthValue)?.label ||
-    monthsOptions[0].label
+    MONTHS_OPTIONS.find((m) => m.value === currentMonthValue)?.label ||
+    MONTHS_OPTIONS[0].label
   );
 };
 
@@ -106,8 +106,8 @@ export const getCurrentWeekValue = () => {
     differenceInCalendarWeeks(today, startOfMonth(today), { weekStartsOn: 1 }) +
     1;
   return (
-    weeksOptions.find((w) => w.label.includes(weekNumber.toString()))?.label ||
-    weeksOptions[0].label
+    WEEKS_OPTIONS.find((w) => w.label.includes(weekNumber.toString()))?.label ||
+    WEEKS_OPTIONS[0].label
   );
 };
 

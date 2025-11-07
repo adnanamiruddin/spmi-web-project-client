@@ -13,7 +13,7 @@ import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { setUser } from "@/redux/features/userSlice";
 import { showErrorAlert, showSuccessAlert } from "@/components/utils/alerts";
-import storageKey from "@/const/storageKey";
+import storageKey from "@/const/STORAGE_KEY";
 import { decrypt, encrypt } from "@/helpers/cryptoHelper";
 
 const AdminContactButton = ({ children, wa }) => {

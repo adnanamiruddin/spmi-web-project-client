@@ -4,6 +4,7 @@ import ChartSection from "@/components/layouts/page-components/home/ChartSection
 import HomeFooter from "@/components/layouts/page-components/home/HomeFooter";
 import HomeHero from "@/components/layouts/page-components/home/HomeHero";
 import TitleSection from "@/components/layouts/page-components/home/TitleSection";
+import { THEME } from "@/const/THEME";
 
 const sampleData = [
   {
@@ -95,31 +96,31 @@ export default function HomePage() {
           />
 
           <div className="mt-4 grid grid-cols-2 gap-4">
-            <Accordion label="Kebijakan Mutu" theme="purple">
+            <Accordion label="Kebijakan Mutu" theme={THEME.PURPLE}>
               <div className="mt-4">Kebijakan Mutu</div>
             </Accordion>
-            <Accordion label="Manual Mutu" theme="purple">
+            <Accordion label="Manual Mutu" theme={THEME.PURPLE}>
               <div className="mt-4">Manual Mutu</div>
             </Accordion>
 
-            <Accordion label="SOP" theme="purple">
+            <Accordion label="SOP" theme={THEME.PURPLE}>
               <div className="mt-4">SOP</div>
             </Accordion>
-            <Accordion label="Standar" theme="purple">
+            <Accordion label="Standar" theme={THEME.PURPLE}>
               <div className="mt-4">Standar</div>
             </Accordion>
 
-            <Accordion label="IKA Pusat dan PRODI" theme="purple">
+            <Accordion label="IKA Pusat dan PRODI" theme={THEME.PURPLE}>
               <div className="mt-4">IKA Pusat dan PRODI</div>
             </Accordion>
-            <Accordion label="Formulir yang Digunakan" theme="purple">
+            <Accordion label="Formulir yang Digunakan" theme={THEME.PURPLE}>
               <div className="mt-4">Formulir yang Digunakan</div>
             </Accordion>
 
-            <Accordion label="Dokumen Pendukung" theme="purple">
+            <Accordion label="Dokumen Pendukung" theme={THEME.PURPLE}>
               <div className="mt-4">Dokumen Pendukung</div>
             </Accordion>
-            <Accordion label="Hubungi Kami" theme="purple">
+            <Accordion label="Hubungi Kami" theme={THEME.PURPLE}>
               <div className="mt-4">Hubungi Kami</div>
             </Accordion>
           </div>

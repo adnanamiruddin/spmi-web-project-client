@@ -12,7 +12,7 @@ export default function ToggleSwitch({
       disabled={disabled}
       onClick={() => !disabled && onChange(!checked)}
       className={`relative inline-flex items-center w-12 h-6 rounded-full transition-colors focus:outline-none ${
-        checked ? "bg-green-500" : "bg-red-500"
+        checked ? "bg-violet-500" : "bg-red-500"
       } ${
         disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
       } ${className}`}

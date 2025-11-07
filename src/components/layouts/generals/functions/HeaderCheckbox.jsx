@@ -5,7 +5,7 @@ export default function HeaderCheckbox({
   disabled = false,
 }) {
   return (
-    <div className="flex justify-between items-center gap-2 p-3 border bg-green-500 rounded">
+    <div className="flex justify-between items-center gap-2 p-3 border bg-violet-500 rounded">
       <p className="font-semibold text-white text-lg">{label}</p>
       <input
         type="checkbox"
@@ -13,7 +13,7 @@ export default function HeaderCheckbox({
         readOnly
         disabled={disabled}
         onClick={onChange}
-        className="checkbox rounded border-2 bg-transparent border-green-700 [--chkbg:theme(colors.green.800)] [--chkfg:theme(colors.white)] disabled:border-green-300 disabled:bg-green-300"
+        className="checkbox rounded border-2 bg-transparent border-violet-700 [--chkbg:theme(colors.violet.800)] [--chkfg:theme(colors.white)] disabled:border-violet-300 disabled:bg-violet-300"
       />
     </div>
   );

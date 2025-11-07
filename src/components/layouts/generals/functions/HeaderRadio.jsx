@@ -6,7 +6,7 @@ export default function HeaderRadio({
   name = "HeaderRadioGroup",
 }) {
   return (
-    <div className="flex justify-between items-center gap-2 p-3 border bg-green-500 rounded">
+    <div className="flex justify-between items-center gap-2 p-3 border bg-violet-500 rounded">
       <p className="font-semibold text-white text-lg">{label}</p>
       <input
         type="radio"
@@ -15,7 +15,7 @@ export default function HeaderRadio({
         disabled={disabled}
         name={name}
         onClick={onChange}
-        className="radio radio-success !border-2 !border-green-600"
+        className="radio radio-success !border-2 !border-violet-600"
       />
     </div>
   );

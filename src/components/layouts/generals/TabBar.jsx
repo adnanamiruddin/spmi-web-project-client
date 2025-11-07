@@ -12,7 +12,7 @@ const TabItem = ({
       onClick={() => setActiveTab(thisTabName)}
       className={`flex-grow flex justify-center items-center px-3 pt-2.5 pb-2 text-sm font-semibold md:text-lg md:-mb-0 ${
         activeTab === thisTabName
-          ? "border-b-4 border-green-500 text-green-600"
+          ? "border-b-4 border-violet-500 text-violet-600"
           : "text-gray-500"
       }`}
     >

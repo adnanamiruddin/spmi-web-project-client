@@ -5,7 +5,7 @@ export const ProdiNav = [
     title: "Menu",
     items: [
       {
-        href: "/dashboard/prodi/home",
+        href: "/dashboard/home",
         label: "Beranda",
         icon: <Icon icon="uil:home-alt" className="text-2xl" />,
       },
@@ -65,7 +65,7 @@ export const ProdiNav = [
   {
     items: [
       {
-        href: "/dashboard/prodi/hasil-desk-evaluation",
+        href: "/dashboard/prodi/manajemen-dokumen",
         label: "Manajemen Dokumen",
         icon: (
           <Icon

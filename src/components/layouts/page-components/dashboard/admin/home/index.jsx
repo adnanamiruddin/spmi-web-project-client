@@ -1,9 +1,8 @@
-import DashboardContainer from "@/components/utils/generals/dashboard-container";
 import Image from "next/image";
 
-export default function DashboardHomePage() {
+export default function AdminHomePageComp() {
   return (
-    <DashboardContainer>
+    <>
       <div className="w-full h-screen relative">
         <Image
           src="/dashboard-home-data-visualization-image.png"
@@ -38,6 +37,6 @@ export default function DashboardHomePage() {
       </div>
 
       <p>Home</p>
-    </DashboardContainer>
+    </>
   );
 }

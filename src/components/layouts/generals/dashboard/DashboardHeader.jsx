@@ -1,6 +1,6 @@
-import LogoutButton from "@/components/layouts/generals/dashboard/logout-button";
-import MoveRoleAccess from "@/components/layouts/generals/dashboard/move-role-access";
-import Semester from "@/components/layouts/generals/dashboard/semester";
+import LogoutButton from "@/components/layouts/generals/dashboard/LogoutButton";
+import MoveRoleAccess from "@/components/layouts/generals/dashboard/MoveRoleAccess";
+import Semester from "@/components/layouts/generals/dashboard/Semester";
 import { formatDateToIndo } from "@/helpers/dateHelper";
 import { Icon } from "@iconify/react";
 import dayjs from "dayjs";

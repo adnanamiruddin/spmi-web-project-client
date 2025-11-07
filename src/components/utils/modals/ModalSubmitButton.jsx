@@ -10,7 +10,7 @@ export default function ModalSubmitButton({
       onClick={loading ? null : onClick}
       className={`${
         fullWidth ? "w-full py-3" : "w-36 py-1.5"
-      } border border-green-600 bg-green-600 rounded text-white text-lg hover:bg-green-500 hover:border-green-500 focus:bg-green-700 focus:border-green-700 ${
+      } border border-violet-600 bg-violet-600 rounded text-white text-lg hover:bg-violet-500 hover:border-violet-500 focus:bg-violet-700 focus:border-violet-700 ${
         loading ? "cursor-not-allowed" : "cursor-pointer"
       }`}
     >

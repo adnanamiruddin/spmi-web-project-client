@@ -12,7 +12,7 @@ export default function AddDataButton({
   // Define color classes based on blackTheme prop
   const colorClasses = blackTheme
     ? "bg-white font-semibold text-[#2C3442] border-[#2C3442] hover:bg-[#f3f4f6] focus:ring-[#2C3442] disabled:text-[#8A929E] disabled:border-[#8A929E]"
-    : "bg-white border-green-700 text-green-700 hover:brightness-125 focus:brightness-90 focus:ring-green-300 focus:ring-opacity-50 disabled:bg-gray-300 disabled:text-green-500 disabled:border-green-500";
+    : "bg-white border-violet-700 text-violet-700 hover:brightness-125 focus:brightness-90 focus:ring-violet-300 focus:ring-opacity-50 disabled:bg-gray-300 disabled:text-violet-500 disabled:border-violet-500";
 
   return (
     <button

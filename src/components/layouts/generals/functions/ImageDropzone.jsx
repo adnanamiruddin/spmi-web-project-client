@@ -197,7 +197,7 @@ export default function ImageDropzone({
                       <p className="text-gray-600 text-sm flex items-center gap-1">
                         <Icon
                           icon="teenyicons:tick-circle-solid"
-                          className="text-green-500 size-4"
+                          className="text-violet-500 size-4"
                         />
                         Selesai
                       </p>
@@ -258,7 +258,7 @@ export default function ImageDropzone({
         // View before upload
         <div
           {...getRootProps()}
-          className="flex flex-col justify-center items-center gap-2 border-2 border-dashed border-gray-300 rounded-lg py-10 cursor-pointer hover:border-green-500 transition"
+          className="flex flex-col justify-center items-center gap-2 border-2 border-dashed border-gray-300 rounded-lg py-10 cursor-pointer hover:border-violet-500 transition"
         >
           <input {...getInputProps()} />
           <Icon

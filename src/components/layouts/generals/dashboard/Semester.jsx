@@ -3,7 +3,7 @@ import PlainButton from "@/components/layouts/generals/functions/PlainButton";
 import SearchBar from "@/components/layouts/generals/functions/SearchBar";
 import NotFound from "@/components/layouts/generals/NotFound";
 import { showErrorAlert, showSuccessAlert } from "@/components/utils/alerts";
-import storageKey from "@/const/storageKey";
+import storageKey from "@/const/STORAGE_KEY";
 import { decrypt, encrypt } from "@/helpers/cryptoHelper";
 import useSearchQuery from "@/helpers/searchQueryHelper";
 import { Icon } from "@iconify/react";

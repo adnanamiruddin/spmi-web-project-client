@@ -18,7 +18,7 @@ export default function MenuSingle({ nav }) {
           } ${
             router.pathname === item.href
               ? "bg-violet-900 text-white"
-              : "text-gray-600"
+              : "text-black"
           }`}
         >
           {item.icon}
