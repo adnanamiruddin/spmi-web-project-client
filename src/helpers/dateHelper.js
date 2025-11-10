@@ -113,5 +113,5 @@ export const getCurrentWeekValue = () => {
 
 export const stripTodayDetailOnDaysList = (day) => {
   if (!day) return day;
-  return day.replace(/\s*\(hari ini\)$/i, ""); // delete space + "(hari ini)" from the end of the string
+  return day.replace(/\s*\(hari ini\)$/i, "");
 };
