@@ -31,7 +31,7 @@ export default function SearchBar({
         onChange={(e) => setSearchQuery(e.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className="input rounded-md px-10 py-3 border-[1.5px] border-gray-200 focus:outline-none bg-white focus:border-gray-500 placeholder-gray-400 transition-all duration-300 shadow-md w-full"
+        className="input rounded-md px-10 py-3 border-[1.5px] border-gray-200 focus:outline-none bg-white focus:border-gray-500 placeholder-gray-400 transition-all duration-300 shadow-md w-full text-black"
       />
       <button
         type="reset"

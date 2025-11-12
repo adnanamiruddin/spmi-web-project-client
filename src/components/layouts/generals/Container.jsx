@@ -15,7 +15,7 @@ export default function Container({
           : theme === THEME.DARK_PURPLE
           ? "bg-violet-700"
           : "bg-gray-50"
-      } ${padding} ${className}`}
+      } ${padding === PADDING.NARROW ? "p-4" : "p-6"} ${className}`}
     >
       {children}
     </div>

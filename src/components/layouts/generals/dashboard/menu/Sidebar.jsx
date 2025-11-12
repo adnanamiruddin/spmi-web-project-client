@@ -15,8 +15,8 @@ export default function Sidebar() {
   const [navItems, setNavItems] = useState([]);
   //
   useEffect(() => {
-    // setNavItems(AdminNav);
-    setNavItems(ProdiNav);
+    setNavItems(AdminNav);
+    // setNavItems(ProdiNav);
   }, []);
   //
   // useEffect(() => {
@@ -35,29 +35,7 @@ export default function Sidebar() {
           {nav.type === "single" ? (
             <MenuSingle nav={nav} />
           ) : (
-            <MenuAccordion
-              label={
-                <div className="flex items-center gap-2">
-                  {nav.icon}
-                  <p className="font-bold text-lg">{nav.title}</p>
-                </div>
-              }
-            >
-              {nav.items.map((item, j) => (
-                <Link
-                  key={j}
-                  href={item.href}
-                  className={`flex items-center gap-4 py-3 px-8 font-semibold hover:bg-violet-600 hover:text-white transition-all duration-300 ease-in-out focus:outline-none focus:text-white focus:bg-violet-700 ${
-                    router.pathname === item.href
-                      ? "bg-violet-900 text-white"
-                      : "text-gray-600"
-                  }`}
-                >
-                  {item.icon}
-                  <p>{item.label}</p>
-                </Link>
-              ))}
-            </MenuAccordion>
+            <MenuAccordion nav={nav} />
           )}
         </div>
       ))}
