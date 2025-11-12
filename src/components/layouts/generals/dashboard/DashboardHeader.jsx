@@ -1,12 +1,12 @@
 import LogoutButton from "@/components/layouts/generals/dashboard/LogoutButton";
-import MoveRoleAccess from "@/components/layouts/generals/dashboard/MoveRoleAccess";
-import Semester from "@/components/layouts/generals/dashboard/Semester";
 import { formatDateToIndo } from "@/helpers/dateHelper";
 import { Icon } from "@iconify/react";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import AccessSection from "@/components/layouts/generals/dashboard/AccessSection";
+import ActivePeriodSection from "@/components/layouts/generals/dashboard/ActivePeriodSection";
 
 const LiveClock = () => {
   const [time, setTime] = useState("--:-- --");
@@ -56,8 +56,8 @@ export default function DashboardHeader() {
       </div>
 
       <div className="h-28 bg-violet-100 p-2 flex gap-1 rounded">
-        <Semester />
-        <MoveRoleAccess />
+        <ActivePeriodSection />
+        <AccessSection />
         <LogoutButton />
       </div>
     </div>
