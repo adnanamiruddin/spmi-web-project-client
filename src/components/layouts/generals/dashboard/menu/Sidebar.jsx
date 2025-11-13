@@ -7,6 +7,7 @@ import MenuSingle from "@/components/layouts/generals/dashboard/menu/MenuSingle"
 import { AdminNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AdminNav";
 import { ProdiNav } from "@/components/layouts/generals/dashboard/menu/nav-items/ProdiNav";
 import { AsesorNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AsesorNav";
+import { FakultasNav } from "@/components/layouts/generals/dashboard/menu/nav-items/Fakultas";
 
 export default function Sidebar() {
   const { user } = useSelector(selectUser);
@@ -18,6 +19,7 @@ export default function Sidebar() {
     // setNavItems(AdminNav);
     setNavItems(ProdiNav);
     // setNavItems(AsesorNav);
+    // setNavItems(FakultasNav);
   }, []);
   //
   // useEffect(() => {

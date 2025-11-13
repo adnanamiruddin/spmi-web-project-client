@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-export const ProdiNav = [
+export const FakultasNav = [
   {
     title: "Menu",
     items: [
@@ -8,21 +8,6 @@ export const ProdiNav = [
         href: "/dashboard/home",
         label: "Beranda",
         icon: <Icon icon="uil:home-alt" className="text-2xl" />,
-      },
-    ],
-    type: "single",
-  },
-  {
-    items: [
-      {
-        href: "/dashboard/fakultas-prodi/target-nilai-mutu",
-        label: "Target Nilai Mutu",
-        icon: (
-          <Icon
-            icon="material-symbols:format-letter-spacing-standard-rounded"
-            className="text-2xl"
-          />
-        ),
       },
     ],
     type: "single",
