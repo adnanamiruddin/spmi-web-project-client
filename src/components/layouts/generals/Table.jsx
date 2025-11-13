@@ -26,7 +26,7 @@ export function Table({ className = "", children }) {
     <div className={`rounded-lg overflow-hidden ${className}`}>
       <table
         className="w-full table-fixed border-separate"
-        style={{ borderSpacing: "2px 0" }}
+        style={{ borderSpacing: "2px" }}
       >
         {children}
       </table>
@@ -73,7 +73,7 @@ export function Tr({ className = "", rowSelected = false, children }) {
 export function Td({ className = "", isActionColumn = false, children }) {
   return (
     <td
-      className={`text-start align-top px-4 py-3 break-words ${
+      className={`bg-white text-black border border-violet-300 rounded-md text-start align-top px-4 py-3 break-words ${
         isActionColumn ? "flex flex-col items-start gap-2" : ""
       } ${className}`}
     >

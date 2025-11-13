@@ -19,7 +19,7 @@ export default function MenuAccordion({ nav, className = "" }) {
 
   return (
     <div
-      className={`collapse collapse-arrow rounded-md transition-colors duration-200 ${
+      className={`collapse collapse-arrow rounded-md transition-all duration-500 ${
         isGroupActive
           ? "bg-violet-700 text-white"
           : "bg-transparent text-gray-800"

@@ -21,7 +21,7 @@ export default function MenuSingle({ nav }) {
             href={item.href}
             aria-current={isActive ? "page" : undefined}
             className={`
-              flex items-center gap-4 py-3 px-5 rounded-md transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-offset-2 ${
+              flex items-center gap-4 py-3 px-5 rounded-md transition-all duration-500 ease-in-out focus:outline-none focus:ring-2 focus:ring-violet-300 focus:ring-offset-2 ${
                 nav.title ? "font-semibold" : "font-bold"
               } ${
               isActive

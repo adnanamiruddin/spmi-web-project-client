@@ -13,11 +13,9 @@ import { useState } from "react";
 export default function TargetNilaiMutuPage() {
   // Search State
   const [searchQuery, setSearchQuery] = useState("");
-
   const handleSearchSubmit = (e) => {
     e.preventDefault();
   };
-
   const handleSearchReset = () => {
     setSearchQuery("");
   };
@@ -117,7 +115,7 @@ export default function TargetNilaiMutuPage() {
         </div>
 
         <Table className="mt-4">
-          <Thead className="!items-start">
+          <Thead>
             <Th className="w-[10%]">No</Th>
             <Th className="w-[30%]">Program Studi</Th>
             <Th className="w-[60%]">Target Nilai</Th>

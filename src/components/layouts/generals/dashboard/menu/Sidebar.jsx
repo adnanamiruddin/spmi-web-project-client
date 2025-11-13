@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import MenuAccordion from "@/components/layouts/generals/dashboard/menu/MenuAccordion";
 import { useEffect, useState } from "react";
@@ -7,6 +6,7 @@ import { selectUser } from "@/redux/features/userSlice";
 import MenuSingle from "@/components/layouts/generals/dashboard/menu/MenuSingle";
 import { AdminNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AdminNav";
 import { ProdiNav } from "@/components/layouts/generals/dashboard/menu/nav-items/ProdiNav";
+import { AsesorNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AsesorNav";
 
 export default function Sidebar() {
   const { user } = useSelector(selectUser);
@@ -15,8 +15,9 @@ export default function Sidebar() {
   const [navItems, setNavItems] = useState([]);
   //
   useEffect(() => {
-    setNavItems(AdminNav);
-    // setNavItems(ProdiNav);
+    // setNavItems(AdminNav);
+    setNavItems(ProdiNav);
+    // setNavItems(AsesorNav);
   }, []);
   //
   // useEffect(() => {
