@@ -1,12 +1,12 @@
-import LogoutButton from "@/components/layouts/generals/dashboard/LogoutButton";
+import LogoutButton from "@/components/layouts/generals/dashboard/navbar/LogoutButton";
 import { formatDateToIndo } from "@/helpers/dateHelper";
 import { Icon } from "@iconify/react";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import AccessSection from "@/components/layouts/generals/dashboard/AccessSection";
-import ActivePeriodSection from "@/components/layouts/generals/dashboard/ActivePeriodSection";
+import AccessSection from "@/components/layouts/generals/dashboard/navbar/AccessSection";
+import ActivePeriodSection from "@/components/layouts/generals/dashboard/navbar/ActivePeriodSection";
 
 const LiveClock = () => {
   const [time, setTime] = useState("--:-- --");

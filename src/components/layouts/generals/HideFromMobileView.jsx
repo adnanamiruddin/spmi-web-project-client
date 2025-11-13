@@ -7,7 +7,7 @@ export default function HideFromMobileView() {
   return (
     <div className="md:hidden bg-gradient-to-br from-violet-200 to-white min-h-screen flex justify-center items-center flex-col gap-6">
       <Image
-        src="/icon-shohwatul-isad.png"
+        src="/icon-spmi.png"
         alt="Sistem Penjaminan Mutu Internal"
         width={500}
         height={500}

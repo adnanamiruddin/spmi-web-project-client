@@ -1,13 +1,13 @@
 import { useRouter } from "next/router";
-import MenuAccordion from "@/components/layouts/generals/dashboard/menu/MenuAccordion";
+import MenuAccordion from "@/components/layouts/generals/dashboard/navbar/menu/MenuAccordion";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "@/redux/features/userSlice";
-import MenuSingle from "@/components/layouts/generals/dashboard/menu/MenuSingle";
-import { AdminNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AdminNav";
-import { ProdiNav } from "@/components/layouts/generals/dashboard/menu/nav-items/ProdiNav";
-import { AsesorNav } from "@/components/layouts/generals/dashboard/menu/nav-items/AsesorNav";
-import { FakultasNav } from "@/components/layouts/generals/dashboard/menu/nav-items/Fakultas";
+import MenuSingle from "@/components/layouts/generals/dashboard/navbar/menu/MenuSingle";
+import { AdminNav } from "@/components/layouts/generals/dashboard/navbar/menu/nav-items/AdminNav";
+import { ProdiNav } from "@/components/layouts/generals/dashboard/navbar/menu/nav-items/ProdiNav";
+import { AsesorNav } from "@/components/layouts/generals/dashboard/navbar/menu/nav-items/AsesorNav";
+import { FakultasNav } from "@/components/layouts/generals/dashboard/navbar/menu/nav-items/Fakultas";
 
 export default function Sidebar() {
   const { user } = useSelector(selectUser);
