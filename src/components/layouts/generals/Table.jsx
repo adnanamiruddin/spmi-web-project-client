@@ -45,7 +45,7 @@ export function Thead({ className = "", children }) {
 export function Th({ className = "", children }) {
   return (
     <th
-      className={`bg-white text-center align-middle px-4 py-3 font-medium text-black
+      className={`bg-white text-center font-semibold text-lg align-middle px-4 py-3 text-black
       border border-violet-300 rounded-md ${className}`}
       scope="col"
     >
@@ -79,5 +79,15 @@ export function Td({ className = "", isActionColumn = false, children }) {
     >
       {children}
     </td>
+  );
+}
+
+export function NotFoundColumn({ className = "" }) {
+  return (
+    <div
+      className={`bg-white text-black text-lg font-semibold border border-violet-300 rounded-md text-center align-top px-4 py-5 break-words w-full ${className}`}
+    >
+      No Matching Records Found
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+import { BORDER_RADIUS } from "@/const/BORDER";
 import { THEME } from "@/const/THEME";
 
 export default function Button({
@@ -5,14 +6,15 @@ export default function Button({
   children = null,
   disabled = false,
   icon = null,
-  theme = null,
+  theme = THEME.LIGHT,
+  borderRadius = BORDER_RADIUS.NORMAL,
   className = "",
 }) {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`py-3 w-full text-white text-lg font-semibold rounded-xl flex justify-center items-center gap-1 hover:brightness-110 focus:brightness-90 disabled:brightness-75 disabled:cursor-not-allowed ${
+      className={`py-3 w-full text-white text-lg font-semibold flex justify-center items-center gap-1 hover:brightness-110 focus:brightness-90 disabled:brightness-75 disabled:cursor-not-allowed ${
         theme === THEME.PURPLE
           ? "bg-violet-500"
           : theme === THEME.DARK_PURPLE
@@ -20,6 +22,12 @@ export default function Button({
           : theme === THEME.GREEN
           ? "bg-green-500"
           : "bg-gray-50 !text-black"
+      } ${
+        borderRadius === BORDER_RADIUS.LARGE
+          ? "rounded-xl"
+          : borderRadius === BORDER_RADIUS.NONE
+          ? "rounded-none"
+          : "rounded-md"
       } ${className}`}
     >
       {icon}

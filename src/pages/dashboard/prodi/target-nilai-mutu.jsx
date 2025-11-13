@@ -2,8 +2,14 @@ import Container from "@/components/layouts/generals/Container";
 import FilterDropdown from "@/components/layouts/generals/FilterDropdown";
 import Button from "@/components/layouts/generals/functions/Button";
 import SearchBar from "@/components/layouts/generals/functions/SearchBar";
-import { Table, Th, Thead } from "@/components/layouts/generals/Table";
+import {
+  NotFoundColumn,
+  Table,
+  Th,
+  Thead,
+} from "@/components/layouts/generals/Table";
 import DashboardContainer from "@/components/utils/generals/DashboardContainer";
+import { BORDER_RADIUS } from "@/const/BORDER";
 import { PADDING } from "@/const/PADDING";
 import { PAGINATION_LIMITS } from "@/const/PAGINATION";
 import { THEME } from "@/const/THEME";
@@ -108,6 +114,7 @@ export default function TargetNilaiMutuPage() {
             onClick={() => {}}
             icon={<Icon icon="mingcute:add-fill" className="text-2xl" />}
             theme={THEME.GREEN}
+            borderRadius={BORDER_RADIUS.LARGE}
             className="py-7 !w-[10%]"
           >
             Tambah
@@ -121,6 +128,30 @@ export default function TargetNilaiMutuPage() {
             <Th className="w-[60%]">Target Nilai</Th>
           </Thead>
         </Table>
+        <NotFoundColumn />
+
+        <Container theme={THEME.DARK_PURPLE} className="mt-4">
+          <div className="flex justify-end">
+            <div className="w-[30%] flex gap-2">
+              <Button
+                onClick={() => {}}
+                icon={<Icon icon="mingcute:add-fill" className="text-2xl" />}
+                theme={THEME.LIGHT}
+                className=""
+              >
+                Previous
+              </Button>
+              <Button
+                onClick={() => {}}
+                icon={<Icon icon="mingcute:add-fill" className="text-2xl" />}
+                theme={THEME.LIGHT}
+                className=""
+              >
+                Next
+              </Button>
+            </div>
+          </div>
+        </Container>
       </Container>
     </DashboardContainer>
   );
