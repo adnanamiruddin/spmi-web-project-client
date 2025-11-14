@@ -21,9 +21,13 @@ export function TableHeaderDetail({
   );
 }
 
-export function Table({ className = "", children }) {
+export function Table({ autoMarginTop = false, className = "", children }) {
   return (
-    <div className={`rounded-lg overflow-hidden ${className}`}>
+    <div
+      className={`rounded-lg overflow-hidden ${
+        autoMarginTop && "mt-4"
+      } ${className}`}
+    >
       <table
         className="w-full table-fixed border-separate"
         style={{ borderSpacing: "2px" }}

@@ -18,7 +18,7 @@ export default function Select({
   onChangeArrayValue = (selectedOption) => {
     selectedOption;
   },
-  clearAutoMargin = false,
+  clearAutoMarginTop = false,
   emptyLabel = false,
 }) {
   const safeOptions = Array.isArray(options) ? options : [];
@@ -38,7 +38,7 @@ export default function Select({
   };
 
   return (
-    <div className={`w-full ${!clearAutoMargin ? "mt-4" : ""}`}>
+    <div className={`w-full ${!clearAutoMarginTop && "mt-4"}`}>
       <div
         className={`mb-2 flex justify-between items-center ${
           emptyLabel && (required || error || shortDescription)

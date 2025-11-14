@@ -187,7 +187,7 @@ export default function LoginPage() {
           />
 
           <Input
-            clearAutoMargin
+            clearAutoMarginTop
             label="Kata Sandi"
             placeholder="Masukkan sandi"
             type="password"

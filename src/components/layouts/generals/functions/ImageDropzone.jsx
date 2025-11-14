@@ -7,7 +7,7 @@ export default function ImageDropzone({
   label,
   onUpload,
   description = "Unggah gambar dengan format PNG, JPG, JPEG, atau WEBP",
-  clearAutoMargin = false,
+  clearAutoMarginTop = false,
   maxImage = 5,
   resetPhoto = false,
   canMultipleUpload = false,
@@ -155,7 +155,7 @@ export default function ImageDropzone({
   };
 
   return (
-    <div className={`w-full ${!clearAutoMargin ? "mt-4" : ""}`}>
+    <div className={`w-full ${!clearAutoMarginTop && "mt-4"}`}>
       <div className="mb-2 flex justify-between items-center">
         <p className="font-semibold text-lg">{label}</p>
         <p className="text-gray-400">

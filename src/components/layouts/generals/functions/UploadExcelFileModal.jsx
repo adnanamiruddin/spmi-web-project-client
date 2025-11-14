@@ -1,6 +1,6 @@
 import ExcelDropzone from "@/components/layouts/generals/functions/ExcelDropzone";
 import { showSuccessAlert } from "@/components/utils/alerts";
-import FormModalContainer from "@/components/utils/modals/form-modal-container";
+import FormModalContainer from "@/components/utils/modals/FormModalContainer";
 import { closeModal, showModal } from "@/helpers/modalActionHelper";
 import { useFormik } from "formik";
 import { useState } from "react";

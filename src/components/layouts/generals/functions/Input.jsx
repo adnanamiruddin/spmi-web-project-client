@@ -11,11 +11,11 @@ export default function Input({
   error = false,
   helperText = "Tolong isi data ini",
   disabled = false,
-  clearAutoMargin = false,
+  clearAutoMarginTop = false,
   emptyLabel = false,
 }) {
   return (
-    <div className={`w-full ${!clearAutoMargin ? "mt-4" : ""}`}>
+    <div className={`w-full ${!clearAutoMarginTop && "mt-4"}`}>
       <div
         className={`mb-2 flex justify-between items-center ${
           emptyLabel && (required || error || shortDescription)

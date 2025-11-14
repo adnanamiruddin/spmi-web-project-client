@@ -12,17 +12,18 @@ import DashboardContainer from "@/components/utils/generals/DashboardContainer";
 import { PADDING } from "@/const/PADDING";
 import { PAGINATION_LIMITS } from "@/const/PAGINATION";
 import { THEME } from "@/const/THEME";
+import useSearchQuery from "@/helpers/searchQueryHelper";
 import { useState } from "react";
 
 export default function DaftarTemuanPage() {
-  // Search State
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-  };
-  const handleSearchReset = () => {
-    setSearchQuery("");
-  };
+  const [findingListData, setFindingListData] = useState([]);
+
+  const { searchQuery, setSearchQuery, filteredData, onReset } = useSearchQuery(
+    findingListData,
+    (item, query) =>
+      item.nama?.toLowerCase().includes(query.toLowerCase()) ||
+      item.guru?.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
     <DashboardContainer
@@ -33,9 +34,10 @@ export default function DaftarTemuanPage() {
         <p className="text-2xl font-semibold">Filter Data</p>
 
         <Container
+          autoMarginTop
           theme={THEME.DARK_PURPLE}
           padding={PADDING.NARROW}
-          className="mt-4 flex justify-between items-center"
+          className="flex justify-between items-center"
         >
           <p className="text-xl font-medium">Tahun</p>
 
@@ -54,9 +56,10 @@ export default function DaftarTemuanPage() {
         </Container>
 
         <Container
+          autoMarginTop
           theme={THEME.DARK_PURPLE}
           padding={PADDING.NARROW}
-          className="mt-4 flex justify-between items-center"
+          className="flex justify-between items-center"
         >
           <p className="text-xl font-medium">Lembaga Akreditasi</p>
 
@@ -75,7 +78,7 @@ export default function DaftarTemuanPage() {
         </Container>
       </Container>
 
-      <Container className="mt-4">
+      <Container autoMarginTop>
         <div className="flex justify-between items-center gap-4">
           <Container
             theme={THEME.DARK_PURPLE}
@@ -103,13 +106,12 @@ export default function DaftarTemuanPage() {
               fullWidth
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-              onSubmit={handleSearchSubmit}
-              onReset={handleSearchReset}
+              onReset={onReset}
             />
           </Container>
         </div>
 
-        <Table className="mt-4">
+        <Table autoMarginTop>
           <Thead>
             <Th className="w-[5%]">No</Th>
             <Th className="w-[25%]">Standar Mutu</Th>

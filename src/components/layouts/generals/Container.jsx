@@ -1,15 +1,18 @@
 import { THEME } from "@/const/THEME";
 import { PADDING } from "@/const/PADDING";
+import { BORDER_RADIUS } from "@/const/BORDER";
 
 export default function Container({
   theme = THEME.PURPLE,
   padding = PADDING.NORMAL,
+  borderRadius = BORDER_RADIUS.NORMAL,
   className = "",
+  autoMarginTop = false,
   children,
 }) {
   return (
     <div
-      className={`rounded-xl text-white ${
+      className={`${autoMarginTop && "mt-4"} rounded-xl text-white ${
         theme === THEME.PURPLE
           ? "bg-violet-500"
           : theme === THEME.DARK_PURPLE
@@ -22,8 +25,16 @@ export default function Container({
           ? "bg-red-500"
           : theme === THEME.DARK_RED
           ? "bg-red-700"
+          : theme === THEME.YELLOW
+          ? "bg-amber-500"
           : "bg-gray-50"
-      } ${padding === PADDING.NARROW ? "p-4" : "p-6"} ${className}`}
+      } ${padding === PADDING.NARROW ? "p-4" : "p-6"} ${
+        borderRadius === BORDER_RADIUS.LARGE
+          ? "rounded-xl"
+          : borderRadius === BORDER_RADIUS.NONE
+          ? "rounded-none"
+          : "rounded-md"
+      }  ${className}`}
     >
       {children}
     </div>

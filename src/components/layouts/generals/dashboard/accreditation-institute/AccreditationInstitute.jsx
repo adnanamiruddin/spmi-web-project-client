@@ -1,10 +1,11 @@
 import Container from "@/components/layouts/generals/Container";
 import AccreditationInstituteItem from "@/components/layouts/generals/dashboard/accreditation-institute/AccreditationInstituteItem";
+import { BORDER_RADIUS } from "@/const/BORDER";
 import { THEME } from "@/const/THEME";
 
 export default function AccreditationInstitute() {
   return (
-    <Container className="mt-4">
+    <Container autoMarginTop>
       <Container
         theme={THEME.DARK_PURPLE}
         className="w-max flex justify-center items-center gap-4"
@@ -13,7 +14,11 @@ export default function AccreditationInstitute() {
           Total Lembaga Akreditasi
         </p>
 
-        <Container className="!p-0 !rounded-md w-12 h-12 flex justify-center items-center !bg-red-500">
+        <Container
+          theme={THEME.RED}
+          borderRadius={BORDER_RADIUS.LARGE}
+          className="w-12 h-12 flex justify-center items-center"
+        >
           <p className="font-semibold text-lg">1</p>
         </Container>
       </Container>

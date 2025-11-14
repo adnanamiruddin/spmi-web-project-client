@@ -35,9 +35,10 @@ export default function TargetNilaiMutuPage() {
         <p className="text-2xl font-semibold">Filter Data</p>
 
         <Container
+          autoMarginTop
           theme={THEME.DARK_PURPLE}
           padding={PADDING.NARROW}
-          className="mt-4 flex justify-between items-center"
+          className="flex justify-between items-center"
         >
           <p className="text-xl font-medium">Tahun</p>
 
@@ -56,9 +57,10 @@ export default function TargetNilaiMutuPage() {
         </Container>
 
         <Container
+          autoMarginTop
           theme={THEME.DARK_PURPLE}
           padding={PADDING.NARROW}
-          className="mt-4 flex justify-between items-center"
+          className="flex justify-between items-center"
         >
           <p className="text-xl font-medium">Lembaga Akreditasi</p>
 
@@ -77,7 +79,7 @@ export default function TargetNilaiMutuPage() {
         </Container>
       </Container>
 
-      <Container className="mt-4">
+      <Container autoMarginTop>
         <div className="flex justify-between items-center gap-4">
           <Container
             theme={THEME.DARK_PURPLE}
@@ -121,7 +123,7 @@ export default function TargetNilaiMutuPage() {
           </Button>
         </div>
 
-        <Table className="mt-4">
+        <Table autoMarginTop>
           <Thead>
             <Th className="w-[10%]">No</Th>
             <Th className="w-[30%]">Program Studi</Th>
@@ -130,7 +132,7 @@ export default function TargetNilaiMutuPage() {
         </Table>
         <NotFoundColumn />
 
-        <Container theme={THEME.DARK_PURPLE} className="mt-4">
+        <Container autoMarginTop theme={THEME.DARK_PURPLE}>
           <div className="flex justify-end">
             <div className="w-[30%] flex gap-2">
               <Button

@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 import DashboardHeader from "@/components/layouts/generals/dashboard/navbar/DashboardHeader";
 import Sidebar from "@/components/layouts/generals/dashboard/navbar/menu/Sidebar";
 import authApi from "@/api/modules/auth.api";
-import ProtectedPage from "@/components/utils/authentications/protected-page/ProtectedPage";
+import ProtectedPage from "@/components/utils/authentications/ProtectedPage";
 import storageKey from "@/const/STORAGE_KEY";
 import { decrypt } from "@/helpers/cryptoHelper";
 import HideFromMobileView from "@/components/layouts/generals/HideFromMobileView";

@@ -3,7 +3,7 @@ import { THEME } from "@/const/THEME";
 
 export default function NotAllowedToDoEvaluation() {
   return (
-    <Container >
+    <Container>
       <Container
         theme={THEME.DARK_PURPLE}
         className="w-max flex justify-center items-center gap-4"
@@ -17,7 +17,7 @@ export default function NotAllowedToDoEvaluation() {
         </Container>
       </Container>
 
-      <Container className="mt-4 !bg-amber-500">
+      <Container autoMarginTop theme={THEME.YELLOW}>
         <p className="text-xl font-medium text-center">
           Belum Waktunya Melakukan Evaluasi Diri
         </p>

@@ -10,10 +10,10 @@ export default function TextArea({
   error = false,
   helperText = "Tolong isi data ini",
   disabled = false,
-  clearAutoMargin = false,
+  clearAutoMarginTop = false,
 }) {
   return (
-    <div className={`w-full ${!clearAutoMargin ? "mt-4" : ""}`}>
+    <div className={`w-full ${!clearAutoMarginTop && "mt-4"}`}>
       <div className="mb-2 flex justify-between items-center">
         <p
           className={`font-semibold text-lg

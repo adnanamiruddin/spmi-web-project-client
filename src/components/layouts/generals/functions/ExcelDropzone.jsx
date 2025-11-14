@@ -8,7 +8,7 @@ export default function ExcelDropzone({
   description = "Unggah file dengan format XLSX atau XLS",
   errorAnalysistResult = [],
   resetFile = false,
-  clearAutoMargin = false,
+  clearAutoMarginTop = false,
 }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
@@ -77,7 +77,7 @@ export default function ExcelDropzone({
   };
 
   return (
-    <div className={`w-full ${!clearAutoMargin ? "mt-4" : ""}`}>
+    <div className={`w-full ${!clearAutoMarginTop && "mt-4"}`}>
       <div>
         <div className="mb-2 flex justify-between items-center">
           <div className="flex items-center gap-2">
