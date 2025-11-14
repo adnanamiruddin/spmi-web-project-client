@@ -137,17 +137,20 @@ export default function TargetNilaiMutuPage() {
             <div className="w-[30%] flex gap-2">
               <Button
                 onClick={() => {}}
-                icon={<Icon icon="mingcute:add-fill" className="text-2xl" />}
+                icon={
+                  <Icon icon="oui:arrow-up" className="text-2xl -rotate-90" />
+                }
                 theme={THEME.LIGHT}
-                className=""
               >
                 Previous
               </Button>
               <Button
                 onClick={() => {}}
-                icon={<Icon icon="mingcute:add-fill" className="text-2xl" />}
+                icon={
+                  <Icon icon="oui:arrow-up" className="text-2xl rotate-90" />
+                }
                 theme={THEME.LIGHT}
-                className=""
+                swapIconPosition
               >
                 Next
               </Button>

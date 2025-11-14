@@ -8,6 +8,7 @@ export default function Button({
   icon = null,
   theme = THEME.LIGHT,
   borderRadius = BORDER_RADIUS.NORMAL,
+  swapIconPosition = false,
   className = "",
 }) {
   return (
@@ -30,8 +31,9 @@ export default function Button({
           : "rounded-md"
       } ${className}`}
     >
-      {icon}
+      {!swapIconPosition && icon}
       {children}
+      {swapIconPosition && icon}
     </button>
   );
 }
