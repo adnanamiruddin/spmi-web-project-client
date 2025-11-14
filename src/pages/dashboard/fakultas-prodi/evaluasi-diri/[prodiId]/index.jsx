@@ -172,7 +172,7 @@ export default function EvaluasiDiriProdiDetailPage() {
                   </div>
 
                   {/* Items List */}
-                  <div className="divide-y divide-gray-300">
+                  <div className="divide-y divide-gray-400">
                     {sub.children.map((item, k) => (
                       <div
                         key={k}

@@ -4,10 +4,9 @@ import { Icon } from "@iconify/react";
 import { useFormik } from "formik";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as Yup from "yup";
 import Cookies from "js-cookie";
-import Select from "@/components/layouts/generals/functions/Select";
 import Input from "@/components/layouts/generals/functions/Input";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
@@ -33,34 +32,15 @@ export default function LoginPage() {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const [employeesData, setEmployeesData] = useState([]);
-  //
-  const fetchEmployeesData = async () => {
-    const { response, error } = await authApi.getEmployees();
-    if (response) {
-      setEmployeesData(response.data);
-    }
-    if (error) {
-      showErrorAlert({
-        message: error.message,
-        showAsNotification: true,
-      });
-    }
-  };
-  //
-  useEffect(() => {
-    fetchEmployeesData();
-  }, []);
-
   const [loading, setLoading] = useState(false);
 
   const signInForm = useFormik({
     initialValues: {
-      teacherName: "",
+      username: "",
       password: "",
     },
     validationSchema: Yup.object({
-      teacherName: Yup.string().required("Nama guru harus diisi"),
+      username: Yup.string().required("Nama Pengguna harus diisi"),
       password: Yup.string().required("Password harus diisi"),
     }),
     onSubmit: async (values) => {
@@ -68,7 +48,7 @@ export default function LoginPage() {
 
       setLoading(true);
       const { response, error } = await authApi.login({
-        username: values.teacherName,
+        username: values.username,
         password: values.password,
       });
 
@@ -163,27 +143,19 @@ export default function LoginPage() {
           onSubmit={signInForm.handleSubmit}
           className="bg-white border-2 border-gray-300 rounded-lg px-8 py-16 flex flex-col gap-8 mx-24 my-48 shadow-lg"
         >
-          <Select
-            required
+          <Input
             label="Nama Pengguna"
             placeholder="Pilih"
-            name="teacherName"
-            dataForm={signInForm}
-            dataFormValue={signInForm.values.teacherName}
-            options={employeesData.map((item) => {
-              return {
-                value: item.id,
-                label: item.nama_gp,
-              };
-            })}
+            name="username"
+            value={signInForm.values.username}
+            onChange={signInForm.handleChange}
             error={
-              signInForm.touched.teacherName &&
-              signInForm.errors.teacherName !== undefined
+              signInForm.touched.username &&
+              signInForm.errors.username !== undefined
             }
             helperText={
-              signInForm.touched.teacherName && signInForm.errors.teacherName
+              signInForm.touched.username && signInForm.errors.username
             }
-            disabled={loading}
           />
 
           <Input
@@ -206,9 +178,9 @@ export default function LoginPage() {
           <LoginButton
             disabled={
               loading ||
-              signInForm.values.teacherName === "" ||
+              signInForm.values.username === "" ||
               signInForm.values.password === "" ||
-              signInForm.values.teacherName === undefined ||
+              signInForm.values.username === undefined ||
               signInForm.values.password === undefined
             }
             loading={loading}
