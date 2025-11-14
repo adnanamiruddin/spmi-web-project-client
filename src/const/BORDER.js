@@ -1,5 +1,6 @@
 export const BORDER_RADIUS = {
-  NONE: "rounded-none",
-  NORMAL: "rounded-md",
-  LARGE: "rounded-xl",
+  NONE: "none",
+  SMALL: "small",
+  NORMAL: "normal",
+  LARGE: "large",
 };

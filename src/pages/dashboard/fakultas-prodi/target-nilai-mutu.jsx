@@ -140,7 +140,6 @@ export default function TargetNilaiMutuPage() {
                 icon={
                   <Icon icon="oui:arrow-up" className="text-2xl -rotate-90" />
                 }
-                theme={THEME.LIGHT}
               >
                 Previous
               </Button>
@@ -149,7 +148,6 @@ export default function TargetNilaiMutuPage() {
                 icon={
                   <Icon icon="oui:arrow-up" className="text-2xl rotate-90" />
                 }
-                theme={THEME.LIGHT}
                 swapIconPosition
               >
                 Next

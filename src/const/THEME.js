@@ -7,5 +7,5 @@ export const THEME = {
   RED: "red",
   DARK_RED: "dark-red",
   YELLOW: "yellow",
-  LIGHT: "light",
+  WHITE: "wHITE",
 };

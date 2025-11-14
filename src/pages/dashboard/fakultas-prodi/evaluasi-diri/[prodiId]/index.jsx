@@ -125,11 +125,6 @@ export default function EvaluasiDiriProdiDetailPage() {
   const router = useRouter();
   const { prodiId } = router.query;
 
-  const handleChoose = (href) => {
-    if (!href) return;
-    router.push(href);
-  };
-
   return (
     <DashboardContainer
       title="Evaluasi Diri"
@@ -166,7 +161,7 @@ export default function EvaluasiDiriProdiDetailPage() {
               <p>{section.title}</p>
             </div>
 
-            {/* Subsections */}
+            {/* Sub Sections */}
             <div className="divide-y divide-white ms-5 flex flex-col gap-2">
               {section.children.map((sub, j) => (
                 <div key={j} className="pt-2">
@@ -202,7 +197,11 @@ export default function EvaluasiDiriProdiDetailPage() {
 
                         <div className="w-[10%]">
                           <Button
-                            onClick={() => {}}
+                            onClick={() => {
+                              router.push(
+                                `/dashboard/fakultas-prodi/evaluasi-diri/${prodiId}/sub-standar/${item.id}`
+                              );
+                            }}
                             icon={
                               <Icon
                                 icon="oui:arrow-up"

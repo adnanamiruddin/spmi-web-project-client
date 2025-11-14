@@ -9,14 +9,16 @@ export default function Badge({
 }) {
   return (
     <div
-      className={`rounded font-medium text-sm ${
+      className={`rounded font-medium ${
         theme === THEME.BLUE
           ? "bg-sky-500"
           : theme === THEME.GREEN
           ? "bg-green-600"
-          : "bg-gray-50"
+          : "bg-gray-50 !text-black"
       } ${
-        padding === PADDING.NARROW ? "px-3 py-0.5" : "px-4 py-2"
+        padding === PADDING.NARROW
+          ? "px-3 py-0.5 text-sm"
+          : "px-4 py-2 text-base"
       } ${className}`}
     >
       {children}

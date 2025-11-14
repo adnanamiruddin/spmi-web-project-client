@@ -6,7 +6,7 @@ export default function Button({
   children = null,
   disabled = false,
   icon = null,
-  theme = THEME.LIGHT,
+  theme = THEME.WHITE,
   borderRadius = BORDER_RADIUS.NORMAL,
   swapIconPosition = false,
   className = "",

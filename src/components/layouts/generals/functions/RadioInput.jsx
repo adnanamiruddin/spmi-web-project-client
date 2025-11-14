@@ -1,4 +1,4 @@
-export default function HeaderRadio({
+export default function RadioInput({
   label,
   checked,
   onChange,
@@ -6,8 +6,7 @@ export default function HeaderRadio({
   name = "HeaderRadioGroup",
 }) {
   return (
-    <div className="flex justify-between items-center gap-2 p-3 border bg-violet-500 rounded">
-      <p className="font-semibold text-white text-lg">{label}</p>
+    <div className="flex items-center gap-3">
       <input
         type="radio"
         checked={checked}
@@ -15,8 +14,9 @@ export default function HeaderRadio({
         disabled={disabled}
         name={name}
         onClick={onChange}
-        className="radio radio-success !border-2 !border-violet-600"
+        className="radio !border-2 !border-white checked:bg-white"
       />
+      <p>{label}</p>
     </div>
   );
 }
